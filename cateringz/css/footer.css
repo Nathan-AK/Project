@@ -1,0 +1,24 @@
+footer {
+  font-family: "Handlee", cursive;
+  color: white;
+  background-color: #357443;
+  padding: 20px 40px;
+}
+
+footer p {
+  text-align: center;
+  font-size: 30px;
+}
+
+@media (max-width: 780px) {
+  footer p {
+    text-align: center;
+    font-size: 18px;
+  }
+}
+@media (max-width: 480px) {
+  footer p {
+    text-align: center;
+    font-size: 14px;
+  }
+}

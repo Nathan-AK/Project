@@ -1,0 +1,232 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Handlee", cursive;
+  height: 100%;
+  background-image: url(../assets/home/homebg.png);
+  background-size: cover;
+  background-position-y: center;
+  background-repeat: no-repeat;
+}
+
+/* styles Hero */
+.hero {
+  background-color: #e4f2d6;
+  margin: 60px;
+  padding: 40px;
+  border: 6px solid #357443;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.hero-left {
+  max-width: 700px;
+}
+
+.hero-left h3 {
+  font-family: sans-serif;
+  font-size: 50px;
+  color: #357443;
+  margin-bottom: 10px;
+}
+
+.hero-left p {
+  font-size: 30px;
+}
+
+.hero-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.hero-tagline {
+  color: #357443;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.hero-img {
+  max-width: 100%;
+}
+
+/* style recommendation */
+
+.heading-container {
+  text-align: center;
+}
+.home-menu {
+  display: inline-block; /* Adjust width to content */
+  position: relative; /* Required for positioning the pseudo-element */
+  color: #fff;
+  font-size: 40px;
+  margin: 60px auto; /* Center the element itself */
+}
+
+.home-menu::after {
+  content: "";
+  position: absolute;
+  width: 100%; /* Full width of the h4 element */
+  height: 3px; /* Thickness of the underline */
+  background-color: yellow; /* Color of the underline */
+  bottom: -5px; /* Distance of the underline from the text */
+  left: 0; /* Position the underline from the left */
+}
+
+.recommendation {
+  text-align: center; /* Center align the content in the section */
+}
+
+.image-recommendation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 50px;
+  gap: 30px;
+}
+.image-recommendation img {
+  max-width: 100%;
+  border-radius: 20px;
+  border: 50px solid #e4f2d6;
+}
+
+.order-nowlink {
+  text-decoration: none;
+}
+.order-now {
+  background-color: #ffd874;
+  font-size: 34px;
+  padding: 30px 80px;
+  border-radius: 60px;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 600;
+  margin-bottom: 60px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.order-now:hover {
+  box-shadow: 0px 16px 4px rgba(0, 0, 0, 0.3);
+}
+
+.button-order {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    margin: 40px;
+  }
+  .home-menu {
+    font-size: 38px;
+    margin: 30px auto;
+  }
+  .image-recommendation img {
+    max-width: 100%;
+    border-radius: 16px;
+    border: 30px solid #e4f2d6;
+  }
+
+  .order-now {
+    font-size: 24px;
+    padding: 20px 60px;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    margin: 40px;
+  }
+
+  .hero-right {
+    flex-direction: column;
+  }
+  .hero-tagline {
+    display: flex;
+    margin-top: 20px;
+    font-size: 18px;
+  }
+
+  .home-menu {
+    font-size: 32px;
+  }
+
+  .image-recommendation {
+    padding: 80px;
+  }
+
+  .image-recommendation img {
+    max-width: 100%;
+    border-radius: 14px;
+    border: 30px solid #e4f2d6;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    margin: 10px;
+    padding: 20px;
+  }
+
+  .hero-right {
+    flex-direction: column;
+  }
+  .hero-tagline {
+    display: flex;
+    margin-top: 20px;
+    font-size: 16px;
+  }
+
+  .hero-tagline p {
+    margin-left: 4px;
+    margin-right: 4px;
+  }
+
+  .hero-left h3 {
+    font-size: 30px;
+  }
+
+  .hero-left p {
+    font-size: 20px;
+  }
+
+  .home-menu {
+    font-size: 24px;
+  }
+
+  .order-now {
+    font-size: 20px;
+    padding: 20px 46px;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.3);
+  }
+}
+
+@media (max-width: 320px) {
+  .hero {
+    margin: 15px;
+  }
+
+  .hero-right {
+    flex-direction: column;
+  }
+  .hero-tagline {
+    display: flex;
+    margin-top: 20px;
+    font-size: 15px;
+  }
+
+  .home-menu {
+    font-size: 18px;
+  }
+}

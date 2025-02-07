@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  background-image: url(../assets/aboutus/team.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+/* style about */
+
+.about-heading {
+  text-align: center;
+  font-size: 30px;
+  text-decoration: underline;
+  color: #fff;
+  margin: 60px 0 40px 0;
+}
+.hero-about {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.about-left {
+  max-width: 1000px;
+  background: #e4f2d6;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 50px;
+  transition: 0.3s;
+}
+
+.about-left:hover {
+  box-shadow: 0px 4px 10px rgba(228, 242, 214, 0.5);
+}
+.about-left p {
+  font-size: 24px;
+}
+
+.about-text {
+  padding: 20px;
+}
+
+.about {
+  padding: 60px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.card-team {
+  max-width: 330px;
+  background-color: #2dad00;
+  color: #fcff56;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.card-team:hover {
+  box-shadow: 0px 4px 10px rgba(228, 242, 214, 0.5);
+}
+.team {
+  max-width: 330px;
+  border-radius: 30px;
+}
+
+.card-team p {
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .about-left {
+    border-radius: 20px;
+  }
+  .about-left p {
+    font-size: 18px;
+  }
+  .about {
+    padding: 60px 10px;
+  }
+  .card-team {
+    border-radius: 20px;
+  }
+  .team {
+    max-width: 280px;
+    border-radius: 20px;
+  }
+
+  .card-team p {
+    font-size: 16px;
+  }
+}

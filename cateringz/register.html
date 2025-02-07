@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CATERINGZ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/register.css" />
+    <link rel="stylesheet" href="./css/navbar.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <h3 class="logo"><a href="./index.html">CAteriNgz</a></h3>
+        <div class="nav-right">
+          <p><a href="./index.html">Home</a></p>
+          <p><a href="./product.html">Product</a></p>
+          <p><a href="./testimoni.html">Testimonial</a></p>
+          <p><a href="./about.html">About Us</a></p>
+          <p><a href="./register.html">Register</a></p>
+        </div>
+        <div class="hamburger-menu">
+          <img src="./assets/navbar/hamburgerMenu.svg" class="hamburger" alt="hamburger" />
+        </div>
+      </nav>
+      <nav class="mobile-menu" id="mobileMenu">
+        <span class="close-menu" id="closeMenu">×</span>
+        <div class="menu-mobile">
+          <p><a href="./index.html">Home</a></p>
+          <p><a href="./product.html">Product</a></p>
+          <p><a href="./testimoni.html">Testimonial</a></p>
+          <p><a href="./about.html">About Us</a></p>
+          <p><a href="./register.html">Register</a></p>
+        </div>
+      </nav>
+    </header>
+    <form id="registerForm" class="register">
+      <div class="container-form">
+        <input type="text" id="username" class="input1" placeholder="username" />
+        <p class="validation" id="usernameError">username must be at least 6 character!</p>
+        <br />
+        <input type="email" id="email" class="input1" placeholder="email" />
+        <p class="validation" id="emailError">email must contain @!</p>
+        <br />
+        <input type="password" id="password" class="input1" placeholder="password" />
+        <p class="validation" id="passwordError">password at least contain 6 character!</p>
+        <br />
+        <label for="gender"><b>Gender</b></label>
+        <!-- <input type="text" id="gender" class="gender" /> -->
+        <select id="gender" class="gender">
+          <option value="">Select Gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+        <br /><br />
+        <p class="dob-label"><b>Date Of Birth</b></p>
+        <div class="DOB-container">
+          <input type="text" id="day" class="DOB" placeholder="DD" />
+          <input type="text" id="month" class="DOB" placeholder="MM" />
+          <input type="text" id="year" class="DOB" placeholder="YYYY" />
+        </div>
+        <p class="validation" id="dobError">Complete the date of birth !</p>
+        <p class="have-acc"><a href="">Already have account?</a></p>
+        <input type="checkbox" name="agree" id="terms" />
+        <label for="terms">By creating an account, you agree to our <a href="">Terms</a> and i have read acknowledge the <a href="">Privacy Policy</a></label>
+        <p class="validation" id="termsError">You haven't agree to this terms & policy!</p>
+        <br />
+        <button type="button" onclick="validateForm()">CREATE ACCOUNT</button>
+      </div>
+    </form>
+    <footer>
+      <p>© 2024 CAteriNgz. All rights reserved.</p>
+    </footer>
+  </body>
+  <script src="./scripts/navbar.js"></script>
+  <script src="./scripts/register.js"></script>
+</html>

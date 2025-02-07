@@ -1,0 +1,69 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  background-image: url(../assets/testimoni/testibg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* style testi */
+.testi-title {
+  text-align: center;
+  font-size: 60px;
+  margin: 100px 0;
+  text-shadow: 1px 9px 6px rgba(53, 116, 67, 0.5);
+}
+.testimonial {
+  margin-top: 40px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  flex-wrap: wrap;
+  padding: 20px;
+  margin-bottom: 60px;
+}
+
+.card-testi {
+  background-color: #d9d9d9;
+  max-width: 300px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: 20px;
+}
+
+.testi-profpic img {
+  object-fit: cover;
+  position: absolute;
+  transform: translate(50%, -60%);
+}
+
+.testi-main {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.person {
+  font-weight: bold;
+  margin-top: 80px;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.stars {
+  margin-top: 20px;
+}
+
+@media (max-width: 780px) {
+  .person {
+    font-size: 18px !important;
+  }
+  .text-testi {
+    font-size: 16px !important;
+  }
+}
