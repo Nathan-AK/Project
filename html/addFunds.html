@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Funds - Voltrix</title>
+    <link rel="stylesheet" href="/css/addFunds.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="nav-container">
+            <div class="nav-menu">
+                <a href="main.html" class="nav-link">Home</a>
+                <a href="map.html" class="nav-link">Map</a>
+                <a href="addfunds.html" class="nav-link active">Add Funds</a>
+                <a href="aboutus.html" class="nav-link">About Us</a>
+                <a href="contactus.html" class="nav-link">Contact Us</a>
+            </div>
+        </nav>
+        <div class="bg-overlay"></div>
+        <div class="bg-elements">
+            <div class="bg-circle circle-1"></div>
+            <div class="bg-circle circle-2"></div>
+        </div>
+        
+        <header>
+            <div class="logo-container">
+                <div class="logo-icon">⚡</div>
+                <span class="logo-text">VOLTRIX</span>
+            </div>
+            <a href="login.html">
+                <!-- <button class="login-btn">Login/Register</button> -->
+            </a>
+        </header>
+        
+        <div class="main-content">
+            <div class="funds-content">
+                <div class="balance-section">
+                    <h2 class="balance-title">Balance :</h2>
+                    <div class="balance-amount" id="currentBalance">Rp 100.000</div>
+                </div>
+                
+                <div class="add-funds-section">
+                    <h1 class="title">Add balance to your account</h1>
+                    <p class="description">
+                        Top up your Voltrix wallet to enjoy a seamless top-up experience. <br>
+                        Choose from quick amounts or enter a custom value.
+                    </p>
+                    
+                    <div class="funds-form">
+                        <div class="amount-selection">
+                            <h3>Select Amount</h3>
+                            <div class="quick-amounts">
+                                <button class="amount-btn" data-amount="50000">Rp 50.000</button>
+                                <button class="amount-btn" data-amount="100000">Rp 100.000</button>
+                                <button class="amount-btn" data-amount="250000">Rp 250.000</button>
+                                <button class="amount-btn" data-amount="500000">Rp 500.000</button>
+                            </div>
+                            
+                            <div class="custom-amount">
+                                <label for="customAmount">Or Enter a Custom Amount:</label>
+                                <div class="input-group">
+                                    <span class="currency">Rp</span>
+                                    <input type="number" id="customAmount" placeholder="0" min="10000" max="2000000" step="1000">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="payment-method">
+                            <h3>Payment Method</h3>
+                            <div class="payment-options">
+                                <label class="payment-option">
+                                    <input type="radio" name="payment" value="card" checked>
+                                    <span class="option-text">💳 Credit Card/Debit</span>
+                                </label>
+                                <label class="payment-option">
+                                    <input type="radio" name="payment" value="gopay">
+                                    <span class="option-text">🟢 GoPay</span>
+                                </label>
+                                <label class="payment-option">
+                                    <input type="radio" name="payment" value="ovo">
+                                    <span class="option-text">🟣 OVO</span>
+                                </label>
+                                <label class="payment-option">
+                                    <input type="radio" name="payment" value="dana">
+                                    <span class="option-text">🔵 DANA</span>
+                                </label>
+                                <label class="payment-option">
+                                    <input type="radio" name="payment" value="shopeepay">
+                                    <span class="option-text">🟠 ShopeePay</span>
+                                </label>
+                                <label class="payment-option">
+                                    <input type="radio" name="payment" value="bank">
+                                    <span class="option-text">🏦 Transfer Bank</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="card-details" id="cardDetails">
+                            <h3>Card Information</h3>
+                            <div class="form-group">
+                                <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19">
+                                <label for="cardNumber">Card Number</label>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <input type="text" id="expiryDate" placeholder="MM/YY" maxlength="5">
+                                    <label for="expiryDate">Expired Date</label>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" id="cvv" placeholder="123" maxlength="4">
+                                    <label for="cvv">CVV</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="cardName" placeholder="Full Name">
+                                <label for="cardName">Card Holder Name</label>
+                            </div>
+                        </div>
+                        
+                        <div class="total-section">
+                            <div class="total-row">
+                                <span>Amount:</span>
+                                <span id="selectedAmount">Rp 0</span>
+                            </div>
+                            <div class="total-row">
+                                <span>Admin Fee:</span>
+                                <span id="processingFee">Rp 0</span>
+                            </div>
+                            <div class="total-row total-final">
+                                <span>Total:</span>
+                                <span id="totalAmount">Rp 0</span>
+                            </div>
+                        </div>
+                        
+                        <button class="add-funds-btn" id="addFundsBtn" disabled>
+                            <span class="btn-text">Add Balance</span>
+                            <span class="btn-loading" style="display: none;">⚡ Processsing...</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="success-modal" id="successModal" style="display: none;">
+            <div class="modal-content">
+                <div class="success-icon">✅</div>
+                <h3>Balance Successfully Added!</h3>
+                <p>Your account has been credited with <span id="addedAmount">Rp 0</span></p>
+                <button class="close-modal-btn" id="closeModal">Next</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/addFunds.js"></script>
+</body>
+</html>

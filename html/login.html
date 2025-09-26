@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Voltrix</title>
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-wrapper">
+            <!-- Left side - Image/Background -->
+            <div class="login-left">
+                <div class="bg-content">
+                    <div class="car-silhouette">
+                        <!-- <img src="/image-icon/MainEV.jpg" alt="" class="car-image"> -->
+                    </div>
+                    <div class="charging-elements">
+                        <!-- <div class="charging-bolt">⚡</div>
+                        <div class="charging-line"></div> -->
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right side - Login Form -->
+            <div class="login-right">
+                <div class="form-container">
+                    <h2 class="welcome-title">Welcome To Voltrix</h2>
+                    <p class="welcome-subtitle">Welcome Back to the Future!</p>
+                    
+                    <form id="loginForm" class="login-form">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="Enter Your Email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" placeholder="Enter Your Password" required>
+                        </div>
+                        
+                        <div class="form-options">
+                            <label class="remember-me">
+                                <input type="checkbox" id="remember">
+                                <span class="checkmark"></span>
+                                Remember me?
+                            </label>
+                            <a href="#" class="forgot-password">Forgot Password?</a>
+                        </div>
+                        
+                        <button type="submit" class="signin-btn">Login</button>
+                    </form>
+                    
+                    <div class="divider">
+                        <span>Or with</span>
+                    </div>
+                    
+                    <div class="social-login">
+                        <a href="https://www.google.com" target="_blank" class="social-btn google">
+                            <img src="/image-icon/icons8-google.svg" alt="Google">
+                        </a>
+                        <a href="https://www.apple.com" target="_blank" class="social-btn apple">
+                            <img src="/image-icon/icons8-apple-inc.svg" alt="Apple">
+                        </a>
+                        <a href="https://www.facebook.com" target="_blank" class="social-btn facebook">
+                            <img src="/image-icon/icons8-facebook-48.png" alt="Facebook">
+                        </a>
+                    </div>
+                    
+                    <p class="register-link">
+                        Don't Have An Account? 
+                        <a href="register.html">Register</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="/js/login.js"></script>
+</body>
+</html>
